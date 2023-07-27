@@ -15,6 +15,7 @@ import {
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import WppBtn from "./components/WppBtn.jsx";
+import CourseDetails from "./pages/CourseDetails.jsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/destinations/:id" element={<DestinationDetails />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:id" element={<CourseDetails />} />
         <Route path="/accommodations" element={<Accommodations />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />

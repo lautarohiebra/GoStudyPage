@@ -325,3 +325,449 @@ export const destinos = [
     ]
   },
 ]
+
+/* Cursos */
+
+export const cursos = [
+  {
+    id: "ingles_general",
+    imagen: "/assets/generalEnglish.jpg",
+    titulo: "Ingles General",
+    edad: "+18 años",
+    nivel: "Todos los niveles",
+    duracion: "A elección (Mínimo 1 semana)",
+    destinos:[
+      {
+        destino:'London',
+        path:"/destinations/londres"
+      },
+      {
+        destino:'Cambridge',
+        path:"/destinations/cambridge"
+      },
+      {
+        destino:'Canterbury',
+        path:"/destinations/canterbury"
+      },
+    ],
+    texto: "Completamente inmerso en un ambiente de habla inglesa , aprovecha las situaciones diarias para usar el idioma fuera del aula; clave para tu progreso.",
+    descripcion:[
+      { 
+        tituloParrafo:"Objetivo",
+        parrafo:"Nuestros cursos trabajan todas las áreas de aprendizaje integradas: Lectura, Escritura, conversación, escucha, gramática y vocabulario. Es este tipo de curso podrás mejorar tu precisión (si utilizas correctamente tu inglés) y tu fluidez (con qué elocuencia lo utilizas). Las clases son diarias y tienen objetivos semanales. Utilizamos el método de aprendizaje en contexto por lo que no serán solo clases gramaticales y de ejercicios sino que tendrás la posibilidad de aprender inglés y practicar tus habilidades de conversación fuera de ésta, en entornos de la vida real combinando tus clases con paseos turísticos y nuevas experiencias culturales."
+      },
+      {
+        tituloParrafo:"Flexibilidad",
+        parrafo:"Podes elegir con qué intensidad querés realizar tu curso para llegar al objetivo que te propongas. Desde Standard a Intensivo o Super intensivo, te ofrecemos cursos que van entre 20 a 30 clases semanales en un Super Intensive. Además, podes personalizarlo eligiendo módulos de estudio de tu interés."
+      },
+      {
+        tituloParrafo:"Examen de nivelación",
+        parrafo:"En el primer día de tu llegada, realizarás actividades de nivelación para evaluar tu nivel de comprensión, vocabulario, gramática y conversación. Esto nos ayudará a entender en qué nivel y clase te sentirás mejor para así tener más éxito en el aprendizaje."
+      },
+    ],
+    tabla: {
+      headers: [
+        {
+          column: "Programa"
+        },
+        {
+          column: "Horas de clase por semana"
+        },
+        {
+          column: "Horas de clase por nivel"
+        },
+        {
+          column: "Número de clases por semana"
+        }
+      ],
+      rows: [
+        {
+          programa: "Estándar",
+          dato1: "15",
+          dato2: "15",
+          dato3: "20"
+        },
+        {
+          programa: "Intensivo",
+          dato1: "19",
+          dato2: "12",
+          dato3: "25"
+        },
+        {
+          programa: "Súper intensivo",
+          dato1: "23",
+          dato2: "12",
+          dato3: "30"
+        },
+        {
+          programa: "Súper intensivo Plus",
+          dato1: "27",
+          dato2: "12",
+          dato3: "35"
+        },
+      ]
+    },
+    modulos:[
+      {
+        nombreModulo:"Inglés academico",
+        textoModulo:"Ganá herramientas para ser exitoso en un ambiente académico en inglés. Aprendé a tomar notas, escuchar clases, discutir sobre temas relacionados a tus estudios, realizá presentaciones eficaces y escribí ensayos."
+      },
+      {
+        nombreModulo:"Herramientas IELTS: Lectura y escritura",
+        textoModulo:"Para alumnos desde un nivel intermedio en adelante que quieran realizar IELRS path. Una mirada por los exámenes de Lectura y Escritura. Las estrategias necesarias para contestar y resolver las preguntas, ejercicios y vocabulario del examen."
+      },
+      {
+        nombreModulo: "Cambridge Clinic",
+        textoModulo: "Dirigido a alumnos estudiando los exámenes de Cambridge. Es un módulo práctico lleno de tips para los exámenes, prácticas, revisión de vocabulario, conversación que aumentará tu eficiencia al rendir las certificaciones."
+      },
+      {
+        nombreModulo: "Speaking Fluency",
+        textoModulo: "El propósito de éste módulo es que los alumnos desarrollen habilidades de comunicación oral efectivas en una variedad de contextos funcionales tales como expresar quejas y disculpas, sociabilizar, persuadir, entre otros. Vocabulario a travez de la escucha de audios Escuchar diferentes textos de relevancia y extraer de los mismos vocabulario interesante y útil para luego utilizarlo en contexto. Además, dicho vocabulario se utilizará en estrategias nuevas para aprender a utilizarlo."
+      },
+      {
+        nombreModulo: "Masterclass en pronunciación",
+        textoModulo: "Esta clase está focalizada en sonidos, en la conección de los mismos en el discurso y en la variación de acentos y dialectos. Las personas podrán entenderte mejor y también, podrás entender a los demás más rápidamente."
+      },
+      {
+        nombreModulo: "Expresiones idiomáticas",
+        textoModulo: "Aprendé y practicá expresiones idiomáticas y utilizá mejor el vocabulario para que tu inglés suene más natural. Excelente para todos aquellos que quieran rendir las certificaciones de Cambridge."
+      },
+      {
+        nombreModulo: "Gramática esencial",
+        textoModulo: "Una oportunidad para que los alumnos de menor nivel puedan ampliar y desarrollar sus conocimientos de gramática para mejorar o bien, para sentirse más cómodos al momento de utilizar el idioma."
+      },
+      {
+        nombreModulo: "Desafío gramatical",
+        textoModulo: "Dirigido a alumnos con un mayor nivel de inglés. En este módulo experimentarán con estructuras gramaticales más complejas y aprenderán a expresarse de distintas maneras engrosando su nivel de vocabulario y estructuras."
+      },
+      {
+        nombreModulo: "Herramientas de presentaciones eficaces",
+        textoModulo: "Aprendé a crear presentaciones exitosas y a adquirir confianza para hablar ante una audiencia. Desde el lenguaje corporal y entonación, este módulo les dará a todos los estudiantes las herramientas para convertirse en presentadores master."
+      },
+      {
+        nombreModulo: "Redes sociales",
+        textoModulo: "Los alumnos aprenderán a mejorar sus habilidades en lo que respecta a redes sociales para promocionarse correctamente a ellos mismos y a sus emprendimientos. Aprenderán a postear eficazmente y a generar vínculos con la audiencia. También, aprenderás cómo la gente utiliza las redes sociales en sus vidas profesionales."
+      },
+      {
+        nombreModulo: "Cultura empresarial",
+        textoModulo: "Explorá direferentes culturas corporativas y tradiciones dentro de diferentes nacionalidades. Focalizate en la diversidad cultural de los negocios, compará y contrastá diferentes corporaciones en distintos países. Compartí tus propias experiencias y aprendé de otros."
+      }
+    ],
+  },
+
+  {
+    id: "gestion_de_negocios",
+    imagen: "/assets/businessManagement.jpg",
+    titulo: "Gestion de negocios",
+    edad: "+18 años",
+    nivel: "Intermediate",
+    duracion: "2 o 4 semanas",
+    destinos:[
+      {
+        destino:'London',
+        path:"/destinations/londres"
+      },
+    ],
+    texto: "Explora lo que te apasiona. Un programa diseñado para equiparte con las habilidades y confianza para comunicarte en un ambiente internacional y profesional.",
+    descripcion:[
+        {
+          tituloParrafo: "Objetivos",
+          parrafo: "Aprender las prácticas de gestión actuales dentro del mundo corporativo. Los alumnos se basarán en conocimientos previos y la experiencia laboral y se familiarizarán con las estratégicas de éxito para administrar no solo un negocio sino también personas."
+        },
+        {
+          tituloParrafo: "Aprenderás",
+          parrafo: "El papel de la dirección y el liderazgo dentro de una organización, el desarrollo de tu propio liderazgo y las relaciones profesionales."
+        },
+        {
+          tituloParrafo: "Cómo aprenderás",
+          parrafo: "Obteniendo una visión general e integral de la gestión empresarial mediante el trabajo en el aula, estudio de casos y un proyecto en equipo."
+        },
+        {
+          tituloParrafo: "Casos de estudio",
+          parrafo: "Trader Joe's, HP, Microsoft, State Farm Bank, Starbucks, GE entre otros."
+        },
+        {
+          tituloParrafo: "Características del curso",
+          parrafo: "El curso consta de dos módulos de 2 semanas cada uno (ej. Negocios 1 y Negocios 2). Los cuales pueden ser tomados juntos o separados extendiendo tu estadía entre 2 a 4 semanas."
+        }
+    ],
+    tabla: {
+      headers: [
+        {
+          column: "Programa"
+        },
+        {
+          column: "Horas de clase por semana"
+        },
+        {
+          column: "Números de semanas"
+        },
+        {
+          column: "Número de clases por semana"
+        }
+      ],
+      rows: [
+        {
+          programa: "Estándar",
+          dato1: "15",
+          dato2: "2 o 4",
+          dato3: "20"
+        },
+        {
+          programa: "Intensivo",
+          dato1: "15",
+          dato2: "2 o 4",
+          dato3: "25"
+        },
+        {
+          programa: "Súper intensivo",
+          dato1: "23",
+          dato2: "2 o 4",
+          dato3: "30"
+        },
+        {
+          programa: "Súper intensivo Plus",
+          dato1: "27",
+          dato2: "2 o 4",
+          dato3: "35"
+        },
+      ]
+    },
+  },
+
+  {
+    id: "gestion_de_proyectos",
+    imagen: "/assets/proyectManagement.jpg",
+    titulo: "Gestion de proyectos",
+    edad: "+18 años",
+    nivel: "Upper Intermediate",
+    duracion: "2 o 4 semanas",
+    destinos:[
+      {
+        destino:'London',
+        path:"/destinations/londres"
+      },
+    ],
+    texto: "Desarrolla tus habilidades para planificar, presupuestar y medir riesgos. Podrás analizar nuevos proyectos y hacer un seguimiento del progreso.",
+    descripcion:[
+        {
+          tituloParrafo: "Objetivos",
+          parrafo: "Obtener una descripción general de las habilidades de gestión general de proyectos y todos los pasos necesarios desde iniciar un plan hasta ejecutar un proyecto."
+        },
+        {
+          tituloParrafo: "Aprenderás",
+          parrafo: "Manejos de cronogramas, presupuestos y riesgos. Además, cómo construir un caso de negocios. Trabajarás sobre cómo analizar nuevos proyectos, realizar el correcto seguimiento y comunicación del progreso, planificar y ejecutar el mismo."
+        },
+        {
+          tituloParrafo: "Cómo aprenderás",
+          parrafo: "Aprenderás mediante el trabajo en el aula, estudios de casos y un proyecto en equipo."
+        },
+        {
+          tituloParrafo: "Casos de estudio",
+          parrafo: "Obras hidráulicas Baldwin, Colorado Parade, Parque eólico de Nueva Zelanda, China Telecom. Marriott Bedding entre otros."
+        },
+        {
+          tituloParrafo: "Características del curso",
+          parrafo: "EL curso consta de dos módulos de 2 semanas cada uno (ej. Proyectos 1 y Proyectos 2). Los cuales pueden ser tomados juntos o separados extendiendo tu estadía entre 2 a 4 semanas."
+        }
+    ],
+    tabla: {
+      headers: [
+        {
+          column: "Programa"
+        },
+        {
+          column: "Horas de clase por semana"
+        },
+        {
+          column: "Números de semanas"
+        },
+        {
+          column: "Número de clases por semana"
+        }
+      ],
+      rows: [
+        {
+          programa: "Estándar",
+          dato1: "15",
+          dato2: "2 o 4",
+          dato3: "20"
+        },
+        {
+          programa: "Intensivo",
+          dato1: "15",
+          dato2: "2 o 4",
+          dato3: "25"
+        },
+        {
+          programa: "Súper intensivo",
+          dato1: "23",
+          dato2: "2 o 4",
+          dato3: "30"
+        },
+        {
+          programa: "Súper intensivo Plus",
+          dato1: "27",
+          dato2: "2 o 4",
+          dato3: "35"
+        },
+      ]
+    },
+  },
+
+  {
+    id: "marketing",
+    imagen: "/assets/marketing.jpg",
+    titulo: "Marketing",
+    edad: "+18 años",
+    nivel: "Upper Intermediate",
+    duracion: "2 o 4 semanas",
+    destinos:[
+      {
+        destino:'London',
+        path:"/destinations/londres"
+      },
+    ],
+    texto: "Seas un profesional experimentado o un estudiante podrás trabajar sobre estrategias de marketing orientadas al cliente, desarrollo de productos, planificación y toma de decisiones.",
+    descripcion:[
+        {
+          tituloParrafo: "Objetivos",
+          parrafo: "Aprender estrategias necesarias para ser exitoso en el mundo global e interactivo con el que nos enfrentamos. Los alumnos recibirán herramientas para evaluar, desarrollar, y proveer un plan de marketing, haciendo énfasis en la resolución de problemas y el impacto del marketing global/digital, redes sociales y e-business."
+        },
+        {
+          tituloParrafo: "Aprenderás",
+          parrafo: "Las partes esenciales de las estrategias de marketing orientadas al cliente, la selección de mercado, el desarrollo de productos, el ciclo de vida, la planificación y la fijación de precios, así como también, la toma de decisiones en cuanto a promociones."
+        },
+        {
+          tituloParrafo: "Cómo aprenderás",
+          parrafo: "Los alumnos aprenderán conceptos actualizados de marketing mediante el trabajo en el aula, un proyecto en equipo y visitas a empresas."
+        },
+        {
+          tituloParrafo: "Casos de estudio",
+          parrafo: "Oreos, Procter&Gamble, Walgreens, Pepsico, Samsung, Chobani Greek Yogurt, Costco entre otros."
+        },
+        {
+          tituloParrafo: "Características del curso",
+          parrafo: "EL curso consta de dos módulos de 2 semanas cada uno (ej. Marketing 1 y Marketing 2). Los cuales pueden ser tomados juntos o separados extendiendo tu estadía entre 2 a 4 semanas."
+        }
+    ],
+    tabla: {
+      headers: [
+        {
+          column: "Programa"
+        },
+        {
+          column: "Horas de clase por semana"
+        },
+        {
+          column: "Números de semanas"
+        },
+        {
+          column: "Número de clases por semana"
+        }
+      ],
+      rows: [
+        {
+          programa: "Estándar",
+          dato1: "15",
+          dato2: "2 o 4",
+          dato3: "20"
+        },
+        {
+          programa: "Intensivo",
+          dato1: "15",
+          dato2: "2 o 4",
+          dato3: "25"
+        },
+        {
+          programa: "Súper intensivo",
+          dato1: "23",
+          dato2: "2 o 4",
+          dato3: "30"
+        },
+        {
+          programa: "Súper intensivo Plus",
+          dato1: "27",
+          dato2: "2 o 4",
+          dato3: "35"
+        },
+      ]
+    },
+  },
+
+  {
+    id: "conceptos_mercado_financiero",
+    imagen: "/assets/finances.jpg",
+    titulo: "Conceptos del mercado financiero",
+    edad: "+18 años",
+    nivel: "Upper intermediate",
+    duracion: "4 semanas",
+    destinos:[
+      {
+        destino:'London',
+        path:"/destinations/londres"
+      },
+    ],
+    texto: "Eligiendo este curso maximizarás el potencial de tu carrera. Negocios, finanzas , economía. Una combinación que desarrollará tus conocimientos de negocios haciendo uso de Bloomberg Market Concepts",
+    descripcion:[
+        {
+          tituloParrafo: "Objetivos",
+          parrafo: "En este desafiante curso, alcanzarás la certificación de conceptos de mercado Bloomberg (BMC), un programa que te brindará una base sólida en torno a BMC utilizada por bancos e inversores de todo el mundo."
+        },
+        {
+          tituloParrafo: "Aprenderás",
+          parrafo: "A utilizar el software de la terminal Bloomberg diseñado para profesionales del sector financiero para monitorear y analizar datos del mercado financiero en tiempo real: este curso es una oportunidad fantástica para trabajar con este sistema de renombre mundial. Los participantes explorarán una variedad de diferentes elementos de los negocios, incluidos el marketing, la gestión, el liderazgo y la ética. También, obtendrás la calificación BMC (Bloomberg Market Concepts)."
+        },
+        {
+          tituloParrafo: "Qué resultados obtendrás",
+          parrafo: "Completarás la certificación de conceptos de mercado de Bloomberg, aumentarás tu conocimiento de las terminales de Bloomberg y sus funciones además de comprender cómo funcionan los mercados conectando las teorías económicas con las aplicaciones prácticas de inversión."
+        },
+        {
+          tituloParrafo: "Características del curso",
+          parrafo: "EL curso consta de dos módulos de 2 semanas cada uno (ej. Finanzas 1 y Finanzas 2). Los cuales pueden ser tomados juntos o separados extendiendo tu estadía entre 2 a 4 semanas."
+        }
+    ],
+    tabla: {
+      headers: [
+        {
+          column: "Programa"
+        },
+        {
+          column: "Horas de clase por semana"
+        },
+        {
+          column: "Números de semanas"
+        },
+        {
+          column: "Número de clases por semana"
+        }
+      ],
+      rows: [
+        {
+          programa: "Estándar",
+          dato1: "15",
+          dato2: "4",
+          dato3: "20"
+        },
+        {
+          programa: "Intensivo",
+          dato1: "15",
+          dato2: "4",
+          dato3: "25"
+        },
+        {
+          programa: "Súper intensivo",
+          dato1: "23",
+          dato2: "4",
+          dato3: "30"
+        },
+        {
+          programa: "Súper intensivo Plus",
+          dato1: "27",
+          dato2: "4",
+          dato3: "35"
+        },
+      ]
+    },
+  },
+]

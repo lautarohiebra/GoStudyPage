@@ -14,8 +14,8 @@ const ProgramDetails = () => {
   return (
     <div>
       <HeroAlt title={programa.titulo} backgroundImage={programa.imagen} />
-      <div className="p-5 flex flex-col xl:flex-row">
-        <div className="rounded-md bg-base-100 p-5 shadow-md mb-4 xl:mr-4">
+      <div className="p-5 flex flex-col xl:flex-row xl:justify-center">
+        <div className="rounded-md bg-base-100 p-5 shadow-md mb-4 xl:mr-4 max-w-6xl">
           <p className="text-gray-700 font-semibold">{programa.texto}</p>
           <div className="divider"></div>
           <p className="text-gray-700">{programa.descripcion}</p>

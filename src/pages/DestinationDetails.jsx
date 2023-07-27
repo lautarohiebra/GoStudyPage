@@ -14,8 +14,8 @@ const DestinationDetails = () => {
   return (
     <div>
       <HeroAlt title={destino.titulo} backgroundImage={destino.imagen} />
-      <div className="p-5 flex flex-col xl:flex-row">
-        <div className="rounded-md bg-base-100 p-5 shadow-md mb-4 xl:mr-4">
+      <div className="p-5 flex flex-col xl:flex-row xl:justify-center">
+        <div className="rounded-md bg-base-100 p-5 shadow-md mb-4 xl:mr-4 max-w-6xl">
           <p className="text-gray-700 font-semibold">{destino.texto}</p>
           <div className="divider"></div>
           {destino.descripcion.map((parrafo, index) =>(

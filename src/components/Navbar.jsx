@@ -52,23 +52,19 @@ const destinos = [
 const cursos = [
   {
     name: "Ingles general",
-    path: "/courses/inglesgen",
+    path: "/courses/ingles_general",
   },
   {
     name: "Con. de mercado Financiero",
-    path: "/courses/cmf",
-  },
-  {
-    name: "Esp. para el mundo corporativo",
-    path: "/courses/emc",
+    path: "/courses/conceptos_mercado_financiero",
   },
   {
     name: "Gestión de negocios",
-    path: "/courses/gn",
+    path: "/courses/gestion_de_negocios",
   },
   {
     name: "Gestion de proyectos",
-    path: "/courses/gp",
+    path: "/courses/gestion_de_proyectos",
   },
   {
     name: "Marketing",

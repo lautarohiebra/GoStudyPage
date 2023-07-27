@@ -1,9 +1,11 @@
-import React from 'react'
+import CoursesCatalog from "../components/coursesPage/CoursesCatalog"
 
-const Courses = () => {
+const Destinations = () => {
   return (
-    <div>Courses</div>
+    <section>
+      <CoursesCatalog />
+    </section>
   )
 }
 
-export default Courses
+export default Destinations

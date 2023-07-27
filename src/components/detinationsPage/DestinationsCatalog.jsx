@@ -7,8 +7,8 @@ const DestinationsCatalog = () => {
   return (
     <>
       <HeroAlt
-        backgroundImage="/assets/programas.jpg"
-        title="Nuestros programas"
+        backgroundImage="/assets/destinations.jpg"
+        title="Destinos"
       />
       <p className="p-2 sm:p-8 bg-primary text-base-100 font-medium mx-8 lg:mx-auto rounded-md shadow-md max-w-xl min-w-[288px] mt-[-30px] mb-3 text-sm md:text-base">
         Según tu edad, necesidad y programa que elijas, tenemos para ofrecerte
