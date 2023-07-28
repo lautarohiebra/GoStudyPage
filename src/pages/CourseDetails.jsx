@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import HeroAlt from "../shared/heroAlt";
 import { cursos } from "../data/servicios";
+import ContactForm from "../components/contactForm";
 
 const CourseDetails = () => {
   const { id } = useParams();
@@ -76,7 +77,7 @@ const CourseDetails = () => {
             </table>
           </div>
         </div>
-        <div className=" w-full xl:w-5/12 h-72 bg-slate-500 rounded-md shadow-md"></div>
+        <ContactForm />
       </div>
     </>
   );

@@ -22,9 +22,9 @@ const ProgramsCatalog = () => {
         {programas.map((programa, index) => (
           <div
             key={programa.id}
-            className="card card-compact w-72 h-[800px] sm:w-80 lg:w-96 bg-base-100 shadow-xl hover:-translate-y-2 transition-all"
+            className="card card-compact w-72 md:h-[800px] sm:w-80 lg:w-96 bg-base-100 shadow-xl hover:-translate-y-2 transition-all"
           >
-            <figure className="min-h-[40%] h-[40%] overflow-hidden">
+            <figure className="max-h-[230px] md:min-h-[40%] md:h-[40%] overflow-hidden">
               <img
                 className="h-full w-full object-cover"
                 src={programa.imagen}
@@ -55,16 +55,15 @@ const ProgramsCatalog = () => {
                     ))}
                 </div>
               </div>
-
               {programa.id === "colegios_e_institutos" ? (
                 <div className="card-actions justify-between flex">
                   <Link to={"/contact"}>
-                    <button className="btn btn-link text-neutral">
-                      Mas destinos
+                    <button className="btn btn-link text-neutral btn-sm xl:btn-md">
+                      Más destinos
                     </button>
                   </Link>
                   <Link to={`/programs/${programa.id}`}>
-                    <button className="btn btn-primary text-base-100">
+                    <button className="btn btn-primary text-base-100 btn-sm xl:btn-md">
                       Saber mas
                     </button>
                   </Link>
@@ -72,7 +71,7 @@ const ProgramsCatalog = () => {
               ) : (
                 <div className="card-actions justify-end">
                   <Link to={`/programs/${programa.id}`}>
-                    <button className="btn btn-primary text-base-100">
+                    <button className="btn btn-primary text-base-100 btn-sm xl:btn-md">
                       Saber mas
                     </button>
                   </Link>

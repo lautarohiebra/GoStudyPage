@@ -350,7 +350,7 @@ export const cursos = [
         path:"/destinations/canterbury"
       },
     ],
-    texto: "Completamente inmerso en un ambiente de habla inglesa , aprovecha las situaciones diarias para usar el idioma fuera del aula; clave para tu progreso.",
+    texto: "Completamente inmerso en un ambiente de habla inglesa, aprovecha las situaciones diarias para usar el idioma fuera del aula.",
     descripcion:[
       { 
         tituloParrafo:"Objetivo",
