@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { programas } from "../../data/servicios";
-import HeroAlt from "../../shared/heroAlt";
+import HeroAlt from "../../shared/HeroAlt";
 
 const ProgramsCatalog = () => {
   return (
@@ -22,7 +22,7 @@ const ProgramsCatalog = () => {
         {programas.map((programa, index) => (
           <div
             key={programa.id}
-            className="card card-compact w-72 md:h-[800px] sm:w-80 lg:w-96 bg-base-100 shadow-xl hover:-translate-y-2 transition-all"
+            className="card card-compact w-72 md:h-[800px] sm:w-80 lg:w-96 bg-base-100 shadow-xl hover:-translate-y-1 transition-all"
           >
             <figure className="max-h-[230px] md:min-h-[40%] md:h-[40%] overflow-hidden">
               <img
@@ -47,8 +47,8 @@ const ProgramsCatalog = () => {
                 <div className="flex flex-col flex-wrap gap-2 justify-start">
                   {programa.destinos &&
                     programa.destinos.map((destino) => (
-                      <Link key={destino.destino} to={destino.path}>
-                        <button className="btn btn-outline btn-xs">
+                      <Link key={destino.destino} to={destino.path} className="inline">
+                        <button className="btn btn-outline btn-xs inline">
                           {destino.destino}
                         </button>
                       </Link>

@@ -5,10 +5,12 @@ const HeroAlt = (props) => {
     return (
       <>
         <div className="h-20"></div>
-        <div className="w-full h-56 overflow-hidden bg-cover bg-center flex flex-col justify-center" style={{backgroundImage: `url(${backgroundImage})`}}>
-          <h2 className="text-2xl lg:text-4xl mx-auto font-semibold text-base-100 p-5 lg:px-9 rounded-full text-center backdrop-blur-lg backdrop-brightness-75">
+        <div className="h-[250px] w-full bg-cover bg-center flex flex-col justify-center" style={{backgroundImage: `url(${backgroundImage})`}}>
+          <div className="backdrop-brightness-90 h-full flex align-middle items-center">
+          <h2 className="text-4xl md:text-5xl mx-auto font-normal text-white p-5 lg:px-9 text-center">
             {title}
           </h2>
+          </div>
         </div>
       </>
     );

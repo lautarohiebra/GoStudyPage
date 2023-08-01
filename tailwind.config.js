@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {},
   },
+  // eslint-disable-next-line no-undef
   plugins: [require("daisyui")],
 
   daisyui: {
-    themes: ["cupcake",
+    themes: ["cupcake","light", "lofi",
       {
         mytheme: {
           primary: "#5263EF",

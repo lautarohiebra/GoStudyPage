@@ -1,9 +1,10 @@
-import React from 'react'
-
 const AboutUs = () => {
   return (
-    <div>AboutUs</div>
-  )
-}
+    <>
+    <div className="h-screen bg-[url('/assets/about.jpg')] bg-fixed bg-cover bg-center" />
 
-export default AboutUs
+    </>
+  );
+};
+
+export default AboutUs;

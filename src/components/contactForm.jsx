@@ -1,19 +1,20 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const formRef = useRef();
+
   const initialFormData = {
-    nombre: "",
-    apellido: "",
-    mail: "",
-    telefono: "",
-    comentarios: "",
+    name: "",
+    surname: "",
+    email: "",
+    phone: "",
+    message: "",
   };
 
-  // Estado para rastrear los datos del formulario
   const [formData, setFormData] = useState(initialFormData);
-
-  /* Estado para rastrear errores de validación */
   const [errors, setErrors] = useState({});
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,12 +22,75 @@ const ContactForm = () => {
       ...prevData,
       [name]: value,
     }));
-
-    /* Limpiamos el mensaje de error cuando se edita el campo */
     setErrors((prevErrors) => ({
       ...prevErrors,
       [name]: "",
     }));
+  };
+
+  const validateForm = () => {
+    const nameRegex = /^[A-Za-z]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+
+    const fieldErrors = {};
+
+    // Required fields validation
+    if (!formData.name) fieldErrors.name = "Este campo es obligatorio.";
+    if (!formData.surname) fieldErrors.surname = "Este campo es obligatorio.";
+    if (!formData.email) fieldErrors.email = "Este campo es obligatorio.";
+
+    // Name and last name validation
+    if (formData.name && !nameRegex.test(formData.name)) {
+      fieldErrors.name = "El Nombre no debe contener números.";
+    }
+    if (formData.surname && !nameRegex.test(formData.surname)) {
+      fieldErrors.surname = "El Apellido no debe contener números.";
+    }
+
+    // Email validation
+    if (formData.email && !emailRegex.test(formData.email)) {
+      fieldErrors.email =
+        "Por favor, ingresa una dirección de correo electrónico válida.";
+    }
+
+    // Phone number validation
+    if (formData.phone && !phoneRegex.test(formData.phone)) {
+      fieldErrors.phone =
+        "Por favor, ingresa un número de teléfono válido (10 dígitos).";
+    }
+
+    setErrors(fieldErrors);
+
+    return Object.keys(fieldErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      // Send the form using emailjs
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
+          formRef.current,
+          import.meta.env.VITE_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log("Datos enviados:", formData);
+            console.log(result.text);
+            handleReset();
+            setFormSubmitted(true);
+          },
+          (error) => {
+            console.log("Error al enviar el formulario:", error.text);
+          }
+        );
+    } else {
+      console.log("Formulario no válido. Verifica los campos.");
+    }
   };
 
   const handleReset = () => {
@@ -34,195 +98,124 @@ const ContactForm = () => {
     setErrors({});
   };
 
-  const handleBlur = (e) => {
-    const { name, value } = e.target;
+  return formSubmitted ? (
+    <div className="mx-auto mt-4 xl:mt-0 text-center flex align-middle items-center justify-center flex-col bg-white p-8 rounded shadow-md w-full max-w-[480px] xl:w-[480px]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-16 h-16 text-success mb-3"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      <h2 className="text-2xl font-bold mb-4">¡Gracias por tu consulta!</h2>
 
-    /* Validación de campos obligatorios */
-    if (
-      !value &&
-      (name === "nombre" || name === "apellido" || name === "mail")
-    ) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        [name]: "Este campo es obligatorio.",
-      }));
-    }
-
-    /* Validación de Nombre y Apellido usando expresiones regulares, regex */
-    const nameRegex = /^[A-Za-z]+$/;
-    if (
-      value &&
-      (name === "nombre" || name === "apellido") &&
-      !nameRegex.test(value)
-    ) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        [name]: "El Nombre y Apellido no deben contener números.",
-      }));
-    }
-
-    /* Validación de correo electrónico, regex */
-    if (value && name === "mail") {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(value)) {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          [name]:
-            "Por favor, ingresa una dirección de correo electrónico válida.",
-        }));
-      }
-    }
-
-    /* Validación de número de teléfono, regex*/
-    if (value && name === "telefono") {
-      const phoneRegex = /^\d{10}$/; // Asume que el número de teléfono debe tener 10 dígitos
-      if (!phoneRegex.test(value)) {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          [name]:
-            "Por favor, ingresa un número de teléfono válido (10 dígitos).",
-        }));
-      }
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    /* Validación de campos obligatorios */
-    if (!formData.nombre || !formData.apellido || !formData.mail) {
-      setErrors({
-        nombre: !formData.nombre ? "Este campo es obligatorio." : "",
-        apellido: !formData.apellido ? "Este campo es obligatorio." : "",
-        mail: !formData.mail ? "Este campo es obligatorio." : "",
-      });
-      return;
-    }
-
-    /* Validación de correo electrónico al enviar formulario.*/
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.mail)) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        mail: "Por favor, ingresa una dirección de correo electrónico válida.",
-      }));
-      return;
-    }
-
-    /* Validación de número de teléfono al enviar formulario.*/
-    if (formData.telefono && !/^\d{10}$/.test(formData.telefono)) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        telefono:
-          "Por favor, ingresa un número de teléfono válido (10 dígitos).",
-      }));
-      return;
-    }
-
-    console.log("Datos enviados:", formData);
-    /* Manejar datos */
-  };
-
-  return (
-    <div className="bg-gray-100 flex items-start w-full xl:w-auto justify-center mt-3 xl:mt-0">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-[480px] xl:w-[480px]">
+      <p>Tu mensaje ha sido enviado correctamente.</p>
+    </div>
+  ) : (
+    <div className="bg-gray-100 flex items-start w-full xl:w-auto justify-center">
+      <div className="bg-white p-8 rounded shadow-md w-full max-w-[480px] lg:w-[480px]">
         <h1 className="text-2xl font-bold mb-6">Dejanos tu consulta</h1>
-        <form onSubmit={handleSubmit}>
+        <form ref={formRef} onSubmit={handleSubmit} method="POST">
           <div className="mb-4">
-            <label htmlFor="nombre" className="block font-medium">
+            <label htmlFor="name" className="block font-medium">
               Nombre *
             </label>
             <input
               type="text"
-              id="nombre"
-              name="nombre"
-              value={formData.nombre}
+              id="name"
+              name="name"
+              value={formData.name}
               onChange={handleChange}
-              onBlur={handleBlur}
               required
               className="border border-gray-300 rounded w-full p-2"
             />
             {/* Mensaje de error */}
-            {errors.nombre && (
-              <span className="text-red-500 text-sm">{errors.nombre}</span>
+            {errors.name && (
+              <span className="text-red-500 text-sm">{errors.name}</span>
             )}
           </div>
 
           <div className="mb-4">
-            <label htmlFor="apellido" className="block font-medium">
+            <label htmlFor="surname" className="block font-medium">
               Apellido *
             </label>
             <input
               type="text"
-              id="apellido"
-              name="apellido"
-              value={formData.apellido}
+              id="surname"
+              name="surname"
+              value={formData.surname}
               onChange={handleChange}
-              onBlur={handleBlur}
               required
               className="border border-gray-300 rounded w-full p-2"
             />
             {/* Mensaje de error */}
-            {errors.apellido && (
-              <span className="text-red-500 text-sm">{errors.apellido}</span>
+            {errors.surname && (
+              <span className="text-red-500 text-sm">{errors.surname}</span>
             )}
           </div>
 
           <div className="mb-4">
-            <label htmlFor="mail" className="block font-medium">
+            <label htmlFor="email" className="block font-medium">
               Correo Electrónico *
             </label>
             <input
               type="email"
-              id="mail"
-              name="mail"
+              id="email"
+              name="email"
               placeholder="ejemplo@gmail.com"
-              value={formData.mail}
+              value={formData.email}
               onChange={handleChange}
-              onBlur={handleBlur}
               required
               className="border border-gray-300 rounded w-full p-2"
             />
             {/* Mensaje de error */}
-            {errors.mail && (
-              <span className="text-red-500 text-sm">{errors.mail}</span>
+            {errors.email && (
+              <span className="text-red-500 text-sm">{errors.email}</span>
             )}
           </div>
 
           <div className="mb-4">
-            <label htmlFor="telefono" className="block font-medium">
+            <label htmlFor="phone" className="block font-medium">
               Teléfono
             </label>
             <input
               type="tel"
-              id="telefono"
-              name="telefono"
-              value={formData.telefono}
+              id="phone"
+              name="phone"
+              value={formData.phone}
               onChange={handleChange}
-              onBlur={handleBlur}
               className="border border-gray-300 rounded w-full p-2"
             />
             {/* Mensaje de error */}
-            {errors.telefono && (
-              <span className="text-red-500 text-sm">{errors.telefono}</span>
+            {errors.phone && (
+              <span className="text-red-500 text-sm">{errors.phone}</span>
             )}
           </div>
 
           <div className="mb-4">
-            <label htmlFor="comentarios" className="block font-medium">
+            <label htmlFor="message" className="block font-medium">
               ¿En qué podemos ayudarte?
             </label>
             <textarea
-              id="comentarios"
-              name="comentarios"
-              value={formData.comentarios}
+              id="message"
+              name="message"
+              value={formData.message}
               onChange={handleChange}
               className="border border-gray-300 rounded w-full p-2 h-24 resize-none"
             />
           </div>
           <div className="flex justify-around">
             <button
+              id="btn_submit"
               type="submit"
+              value="Send"
               className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded"
             >
               Enviar

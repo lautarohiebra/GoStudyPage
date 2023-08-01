@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { cursos } from "../../data/servicios";
-import HeroAlt from "../../shared/heroAlt";
+import HeroAlt from "../../shared/HeroAlt";
 
 const ProgramsCatalog = () => {
   return (
@@ -22,7 +22,7 @@ const ProgramsCatalog = () => {
         {cursos.map((curso, index) => (
           <div
             key={curso.id}
-            className="card card-compact w-72 h-[770px] sm:w-80 lg:w-96 bg-base-100 shadow-xl hover:-translate-y-2 transition-all"
+            className="card card-compact w-72 h-[800px] sm:w-80 lg:w-96 bg-base-100 shadow-xl hover:-translate-y-2 transition-all"
           >
             <figure className="min-h-[40%] h-[40%] overflow-hidden">
               <img

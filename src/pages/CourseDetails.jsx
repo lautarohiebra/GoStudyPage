@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import HeroAlt from "../shared/heroAlt";
+import HeroAlt from "../shared/HeroAlt";
 import { cursos } from "../data/servicios";
 import ContactForm from "../components/contactForm";
 
@@ -15,7 +15,7 @@ const CourseDetails = () => {
   return (
     <>
       <HeroAlt title={curso.titulo} backgroundImage={curso.imagen} />
-      <div className="p-5 flex flex-col xl:flex-row xl:justify-center">
+      <div className="p-5 flex flex-col xl:flex-row xl:justify-center gap-3">
         <div className="rounded-md bg-base-100 p-5 shadow-md mb-4 xl:mr-4 max-w-6xl">
           <p className="text-gray-700 font-semibold">{curso.texto}</p>
           <div className="divider"></div>
