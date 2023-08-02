@@ -216,14 +216,14 @@ const ContactForm = () => {
               id="btn_submit"
               type="submit"
               value="Send"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded"
+              className="btn btn-outline py-2 px-4"
             >
               Enviar
             </button>
             <button
               type="reset"
               onClick={handleReset}
-              className="bg-gray-400 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded"
+              className="btn btn-outline py-2 px-4"
             >
               Limpiar
             </button>

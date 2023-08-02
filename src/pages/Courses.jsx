@@ -2,7 +2,7 @@ import CoursesCatalog from "../components/coursesPage/CoursesCatalog"
 
 const Destinations = () => {
   return (
-    <section>
+    <section className="bg-[url('/assets/backgroundDesign.png')] bg-fixed">
       <CoursesCatalog />
     </section>
   )

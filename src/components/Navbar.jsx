@@ -423,7 +423,7 @@ const Navbar = () => {
             </details>
           </li>
           <li >
-            <Link to={"/accommodations"} className="hover:text-primary">
+            <Link to={"/accommodations"} className="hover:text-primary hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

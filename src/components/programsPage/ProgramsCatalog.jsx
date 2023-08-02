@@ -10,7 +10,7 @@ const ProgramsCatalog = () => {
         backgroundImage="/assets/programas.jpg"
         title="Nuestros programas"
       />
-      <p className="p-2 sm:p-8 bg-primary text-base-100 font-medium mx-8 lg:mx-auto rounded-md shadow-md max-w-xl min-w-[288px] mt-[-30px] mb-3 text-sm md:text-base">
+      <p className="p-2 sm:p-8 bg-secondary text-white font-medium mx-8 lg:mx-auto  max-w-2xl min-w-[288px] mt-[-30px] mb-3 text-sm md:text-base">
         Tenemos una variedad de cursos y programas para distintos alumnos y
         situaciones. Deja que te ayudemos a encontrar el curso que es mejor para
         vos!
