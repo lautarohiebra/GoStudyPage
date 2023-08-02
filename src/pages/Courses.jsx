@@ -1,6 +1,6 @@
 import CoursesCatalog from "../components/coursesPage/CoursesCatalog"
 
-const Destinations = () => {
+const Courses = () => {
   return (
     <section className="bg-[url('/assets/backgroundDesign.png')] bg-fixed">
       <CoursesCatalog />
@@ -8,4 +8,4 @@ const Destinations = () => {
   )
 }
 
-export default Destinations
+export default Courses

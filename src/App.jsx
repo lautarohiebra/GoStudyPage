@@ -3,22 +3,21 @@ import { Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import {
-  AboutUs,
-  Accommodations,
-  Contact,
-  Courses,
-  Destinations,
-  Home,
-  Programs,
-  ProgramDetails,
-  DestinationDetails,
-} from "./pages/main.js";
 
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import WppBtn from "./components/WppBtn.jsx";
+
+import Home from "./pages/Home.jsx";
+import Programs from "./pages/Programs.jsx";
+import ProgramDetails from "./pages/ProgramDetails.jsx";
+import Destinations from "./pages/Destinations.jsx";
+import DestinationDetails from "./pages/DestinationDetails.jsx";
+import Courses from "./pages/Courses.jsx";
 import CourseDetails from "./pages/CourseDetails.jsx";
+import Accommodations from "./pages/Accommodations.jsx";
+import AboutUs from "./pages/aboutUs.jsx";
+import Contact from "./pages/Contact.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
