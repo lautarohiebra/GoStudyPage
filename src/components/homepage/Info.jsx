@@ -1,6 +1,6 @@
 const Info = () => {
   return (
-    <section className="bg-none h-screen flex flex-col align-middle items-center justify-center">
+    <section className="bg-none min-h-screen flex flex-col align-middle items-center justify-center">
       <div className="flex flex-col items-center justify-center h-[50%] bg-base-100 w-full p-4">
         <div className="p-5 flex flex-col items-center">
           <h2 className="font-bold text-xl lg:text-4xl mb-3 text-primary text-center">

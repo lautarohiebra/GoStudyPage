@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen bg-[url('/assets/homeHero2.jpg')] xl:bg-[url('/assets/homeHero3.jpg')] bg-fixed">
+    <div className="hero min-h-screen bg-[url('/assets/homeHero2.jpg')] xl:bg-[url('/assets/homeHero3.jpg')] bg-cover lg:bg-fixed">
       <div className="hero-overlay bg-opacity-40 bg-black xl:bg-opacity-25"></div>
       <div className="text-neutral-content">
         <div className="max-w-2xl flex flex-col items-center lg:items-start text-center lg:text-start">
@@ -13,7 +13,7 @@ const Hero = () => {
             ¡Aprende inglés y comunícate sin límites!
           </p>
           <Link
-            to={"#"}
+            to={"/contact"}
             className="btn border-none w-auto hover:-translate-y-1 text-white shadow-md gradientCTA"
           >
             Comienza ahora

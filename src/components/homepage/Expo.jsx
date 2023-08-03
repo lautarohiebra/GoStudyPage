@@ -8,12 +8,12 @@ const Expo = () => {
       {items.map((item,index) => (
         <div
           key={`expo_${index}`}
-          className={`hero min-h-screen bg-fixed bg-center ${item.image}`}
+          className={`hero min-h-[400px] lg:min-h-screen bg-cover lg:bg-fixed bg-center ${item.image}`}
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-              <h2 className="mb-5 text-5xl font-bold">{item.title}</h2>
+              <h2 className="mb-5 text-3xl lg:text-5xl font-bold">{item.title}</h2>
               <p className="mb-5">{item.text}</p>
               <Link to={item.path}>
                 <button className="btn border-none hover:translate-x-1 gradientCTA">
