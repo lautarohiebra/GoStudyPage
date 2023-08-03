@@ -1,8 +1,8 @@
 const Info = () => {
   return (
-    <section className="bg-none min-h-screen flex flex-col align-middle items-center justify-center">
+    <section className="bg-none flex flex-col align-middle items-center justify-center ">
       <div className="flex flex-col items-center justify-center h-[50%] bg-base-100 w-full p-4">
-        <div className="p-5 flex flex-col items-center">
+        <div className="px-5 py-10 flex flex-col items-center">
           <h2 className="font-bold text-xl lg:text-4xl mb-3 text-primary text-center">
             Desarrolla y perfecciona tu comunicación
           </h2>
@@ -20,7 +20,7 @@ const Info = () => {
           </p>
         </div>
       </div>
-      <div className="p-5 flex flex-col items-center justify-center h-[50%] bg-primary w-full">
+      <div className="px-5 py-10 flex flex-col items-center justify-center h-[50%] bg-primary w-full">
         <h2 className="font-semibold text-xl lg:text-4xl mb-3 text-base-100 text-center">
           Experimenta el aprendizaje al estilo Go Study
         </h2>

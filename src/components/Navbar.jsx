@@ -55,7 +55,7 @@ const cursos = [
     path: "/courses/ingles_general",
   },
   {
-    name: "Con. de mercado Financiero",
+    name: "Mercado Financiero",
     path: "/courses/conceptos_mercado_financiero",
   },
   {

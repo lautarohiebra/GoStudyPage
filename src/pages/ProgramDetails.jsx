@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import HeroAlt from "../shared/HeroAlt";
 import { programas } from "../data/servicios";
 import ContactForm from "../components/contactForm";
@@ -27,6 +27,47 @@ const ProgramDetails = () => {
               </li>
             ))}
           </ul>
+
+          {id === "ingles_para_profesionales" && (
+            <>
+            <div className="divider"></div>
+          <div className="">
+            <p className="font-semibold mb-2">Certificaciones Disponibles para cursar:</p>
+            <ul className="list-disc list-inside ml-6">
+              <li>
+                Ingles General
+                <Link to="/courses/ingles_general" className="ml-2 hover:underline transition-all text-info">
+                  Saber más
+                </Link>
+              </li>
+              <li>
+                Gestion de negocios
+                <Link to="/courses/gestion_de_negocios" className="ml-2 hover:underline transition-all text-info">
+                  Saber más
+                </Link>
+              </li>
+              <li>
+                Gestion de proyectos
+                <Link to="/courses/gestion_de_proyectos" className="ml-2 hover:underline transition-all text-info">
+                  Saber más
+                </Link>
+              </li>
+              <li>
+                Marketing
+                <Link to="/courses/marketing" className="ml-2 hover:underline transition-all text-info">
+                  Saber más
+                </Link>
+              </li>
+              <li>
+                Conceptos de mercado financiero (Bloomberg)
+                <Link to="/courses/conceptos_mercado_financiero" className="ml-2 hover:underline transition-all text-info">
+                  Saber más
+                </Link>
+              </li>
+            </ul>
+          </div>
+          </>
+        )}
         </div>
           <ContactForm/>
       </div>
