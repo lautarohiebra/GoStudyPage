@@ -1,11 +1,15 @@
-import CatalogPagePrograms from "../components/programsPage/ProgramsCatalog"
+import CatalogPagePrograms from "../components/programsPage/ProgramsCatalog";
+import FixedBg from "../shared/FixedBg";
 
 const Programs = () => {
   return (
-    <section className="bg-base-200 lg:bg-[url('/assets/backgroundDesign.png')] bg-cover lg:bg-fixed">
-      <CatalogPagePrograms />
-    </section>
-  )
-}
+    <>
+      <FixedBg img="/assets/backgroundDesign.png" />
+      <section>
+        <CatalogPagePrograms />
+      </section>
+    </>
+  );
+};
 
-export default Programs
+export default Programs;

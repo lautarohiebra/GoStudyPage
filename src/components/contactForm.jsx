@@ -216,14 +216,14 @@ const ContactForm = () => {
               id="btn_submit"
               type="submit"
               value="Send"
-              className="btn btn-outline py-2 px-4"
+              className="btn btn-outline btn-accent py-2 px-4 montserrat"
             >
               Enviar
             </button>
             <button
               type="reset"
               onClick={handleReset}
-              className="btn btn-outline py-2 px-4"
+              className="btn btn-outline py-2 px-4 montserrat"
             >
               Limpiar
             </button>

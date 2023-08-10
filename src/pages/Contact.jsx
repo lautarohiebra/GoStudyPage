@@ -10,18 +10,18 @@ const Contact = () => {
           <h3 className="text-2xl font-semibold mt-5 lg:mt-0 text-center lg:text-left">
             ¿Tienes preguntas o comentarios?
           </h3>
-          <h4 className="text-xl font-semibold text-secondary text-center lg:text-left">
+          <h4 className="text-xl font-semibold text-accent text-center lg:text-left">
           ¡Estamos aquí para ayudarte!
           </h4>
           <p className="max-w-xl lg:text-lg text-gray-800">
-            En <span className="font-semibold">GoStudy</span>, valoramos tus inquietudes y estamos listos para
+            En <span className="font-semibold text-accent">GoStudy</span>, valoramos tus inquietudes y estamos listos para
             brindarte toda la información que necesitas. No dudes en comunicarte
             con nosotros a través de los siguientes medios:
           </p>
           <ul>
-            <li>Teléfono: xxxxxxxx</li>
-            <li>Horarios de atención: xxxxxxxx</li>
-            <li>Email: xxxxxxxx</li>
+            <li><span className="font-semibold">Teléfono:</span> +54 9-11-5582-1218 | +54 9-11-3594-1002</li>
+            <li><span className="font-semibold">Horarios:</span></li>
+            <li><span className="font-semibold">Email:</span></li>
           </ul>
         </div>
         <div className="w-full py- lg:w-auto">

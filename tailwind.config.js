@@ -8,26 +8,12 @@ export default {
   plugins: [require("daisyui")],
 
   daisyui: {
-    themes: ["cupcake","light", "lofi",
+    themes: [
       {
-        mytheme: {
-          primary: "#5263EF",
-
-          secondary: "#88f3ec",
-
-          accent: "#67e8f9",
-
-          neutral: "#111111",
-
-          "base-100": "#f5f5f5",
-
-          info: "#67e8f9",
-
-          success: "#86efac",
-
-          warning: "#f7e488",
-
-          error: "#f43f5e",
+        lofi: {
+          // eslint-disable-next-line no-undef
+          ...require("daisyui/src/theming/themes")["[data-theme=lofi]"],
+          "accent": "#ED127B",
         },
       },
     ],

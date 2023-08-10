@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 import { cursos } from "../../data/servicios";
 import HeroAlt from "../../shared/HeroAlt";
 
-const ProgramsCatalog = () => {
+const CoursesCatalog = () => {
   return (
     <>
       <HeroAlt
-        backgroundImage="/assets/programas.jpg"
+        backgroundImage="/assets/courses.jpg"
         title="Nuestros cursos"
       />
-      <p className="p-2 sm:p-8 bg-secondary text-white font-medium mx-8 lg:mx-auto max-w-2xl min-w-[288px] mt-[-30px] mb-3 text-sm md:text-base">
+      <p className="p-2 sm:p-8 bg-secondary text-white font-medium mx-8 lg:mx-auto max-w-2xl min-w-[288px] mt-[-30px] mb-3 text-sm md:text-base z-50">
         Tenemos una variedad de cursos y programas para distintos alumnos y
         situaciones. Deja que te ayudemos a encontrar el curso que es mejor para
         vos!
       </p>
 
       {/* Card Container */}
-      <div className="flex flex-col md:flex-row flex-wrap py-5 px-auto lg:p-16 justify-center align-middle items-center gap-6">
+      <div className="bg-none flex flex-col md:flex-row flex-wrap py-5 px-auto lg:p-16 justify-center align-middle items-center gap-6">
         {/* Card */}
         {cursos.map((curso, index) => (
           <div
@@ -73,7 +73,7 @@ const ProgramsCatalog = () => {
               </div>
               <div className="card-actions justify-end">
                 <Link to={`/courses/${curso.id}`}>
-                  <button className="btn btn-primary text-base-100">
+                  <button className="btn btn-primary text-base-100 montserrat">
                     Saber mas
                   </button>
                 </Link>
@@ -86,4 +86,4 @@ const ProgramsCatalog = () => {
   );
 };
 
-export default ProgramsCatalog;
+export default CoursesCatalog;

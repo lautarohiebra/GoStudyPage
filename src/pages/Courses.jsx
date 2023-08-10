@@ -1,10 +1,14 @@
 import CoursesCatalog from "../components/coursesPage/CoursesCatalog"
+import FixedBg from "../shared/FixedBg"
 
 const Courses = () => {
   return (
-    <section className="bg-base-200 lg:bg-[url('/assets/backgroundDesign.png')] bg-cover lg:bg-fixed">
+    <>
+    <FixedBg img="/assets/backgroundDesign.png" />
+    <section>
       <CoursesCatalog />
     </section>
+    </>
   )
 }
 

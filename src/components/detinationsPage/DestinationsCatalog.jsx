@@ -39,7 +39,7 @@ const DestinationsCatalog = () => {
               </div>
               <div className="card-actions justify-end">
                 <Link to={`/destinations/${destino.id}`}>
-                  <button className="btn btn-primary text-base-100">
+                  <button className="btn btn-primary text-base-100 montserrat">
                     Saber mas
                   </button>
                 </Link>

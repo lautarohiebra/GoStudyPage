@@ -14,7 +14,7 @@ const Hero = () => {
           </p>
           <Link
             to={"/contact"}
-            className="btn border-none w-auto hover:-translate-y-1 text-white shadow-md gradientCTA"
+            className="btn montserrat border-none w-auto hover:-translate-y-1 text-white shadow-md gradientCTA"
           >
             Comienza ahora
           </Link>

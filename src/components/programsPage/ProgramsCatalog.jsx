@@ -58,12 +58,12 @@ const ProgramsCatalog = () => {
               {programa.id === "colegios_e_institutos" ? (
                 <div className="card-actions justify-between flex">
                   <Link to={"/contact"}>
-                    <button className="btn btn-link text-neutral btn-sm xl:btn-md">
+                    <button className="btn btn-link text-neutral btn-sm xl:btn-md montserrat">
                       Más destinos
                     </button>
                   </Link>
                   <Link to={`/programs/${programa.id}`}>
-                    <button className="btn btn-primary text-base-100 btn-sm xl:btn-md">
+                    <button className="btn btn-primary text-base-100 btn-sm xl:btn-md montserrat">
                       Saber mas
                     </button>
                   </Link>
@@ -71,7 +71,7 @@ const ProgramsCatalog = () => {
               ) : (
                 <div className="card-actions justify-end">
                   <Link to={`/programs/${programa.id}`}>
-                    <button className="btn btn-primary text-base-100 btn-sm xl:btn-md">
+                    <button className="btn btn-primary text-base-100 btn-sm xl:btn-md montserrat">
                       Saber mas
                     </button>
                   </Link>

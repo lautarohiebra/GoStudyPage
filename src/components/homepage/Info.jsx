@@ -8,10 +8,10 @@ const Info = () => {
           </h2>
           <p className="text-base lg:text-lg text-center max-w-xl mb-1">
             El inglés es el{" "}
-            <span className="text-secondary">idioma universal</span> que te
+            <span className="text-accent">idioma universal</span> que te
             permite{" "}
-            <span className="text-secondary">comunicarte sin barreras</span> y{" "}
-            <span className="text-secondary">aprovechar al máximo </span> las
+            <span className="text-accent">comunicarte sin barreras</span> y{" "}
+            <span className="text-accent">aprovechar al máximo </span> las
             oportunidades del siglo XXI.
           </p>
           <p className="text-base lg:text-lg text-center max-w-xl mb-1">
@@ -22,7 +22,7 @@ const Info = () => {
       </div>
       <div className="px-5 py-10 flex flex-col items-center justify-center h-[50%] bg-primary w-full">
         <h2 className="font-semibold text-xl lg:text-4xl mb-3 text-base-100 text-center">
-          Experimenta el aprendizaje al estilo Go Study
+          Experimenta el aprendizaje al estilo <span className="text-accent">Go Study</span>
         </h2>
         <p className="text-base-100 font-normal text-lg text-center max-w-xl">
           Experiencias dinámicas que van mas allá de aprender un nuevo lenguaje.

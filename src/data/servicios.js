@@ -123,7 +123,7 @@ export const programas = [
       },
     ],
     texto: "Nuestra misión es mejorar tus habilidades lingüísticas para alcanzar tus objetivos profesionales.",
-    descripcion: "Mediante actividades auténticas y orientadas por objetivos diseñadas para desarrollar las habilidades del idioma y fortalecer la confianza, los alumnos del curso de los cursos de Business English serán entrenados para llevar a cabo y sobresalir en una gran variedad de situaciones de negocios entre las que se encuentran: ventas, marketing, publicidad, RRHH, administración, finanzas y gestión.",
+    descripcion: "Mediante actividades auténticas y orientadas por objetivos diseñadas para desarrollar las habilidades del idioma y fortalecer la confianza, los alumnos de Business English serán entrenados para llevar a cabo y sobresalir en una gran variedad de situaciones de negocios entre las que se encuentran: ventas, marketing, publicidad, RRHH, administración, finanzas y gestión.",
     items: [
       { textoItem: "Objetivo: Estos son cursos orientados a mejorar las herramientas y el vocabulario del idioma. Aprenderán por medio de casos de estudio reales, vocabulario específico, presentaciones eficaces, negociaciones y reuniones como así también, la escritura correcta de emails, CVs y resumenes." },
       { textoItem: "Características del curso: Intensivo y súper intensivo con módulos dictados por especialistas que introducen vocabulario empresarial funcional para ser aplicado en contexto. Además, desarrolla las cuatro habilidades básicas como conversación, lectura, escritura y escucha. Desarrolla, también, el vocabulario y mejora la gramática." },
