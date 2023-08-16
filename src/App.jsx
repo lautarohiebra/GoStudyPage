@@ -18,6 +18,7 @@ import CourseDetails from "./pages/CourseDetails.jsx";
 import Accommodations from "./pages/Accommodations.jsx";
 import AboutUs from "./pages/aboutUs.jsx";
 import Contact from "./pages/Contact.jsx";
+import Gallery from "./pages/Gallery.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -45,6 +46,7 @@ function App() {
         <Route path="/accommodations" element={<Accommodations />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
       <WppBtn />
       <Footer />
