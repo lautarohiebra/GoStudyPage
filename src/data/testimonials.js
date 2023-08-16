@@ -52,7 +52,7 @@ export const testimonialsData = [
     {
       id: 11,
       name: 'Pablo Marcato',
-      testimonial: '"Una maravilla la onda que le ponen, la cara de los chicos demuestra lo comodos y felices que están."',
+      testimonial: '"Una maravilla la onda que le ponen, la cara de los chicos demuestra lo comodos y felices que están. Una experiencia innolvidable, por muchas mas!"',
     },
     {
       id: 12,
@@ -73,10 +73,5 @@ export const testimonialsData = [
       id: 15,
       name: 'Jorge Alberto Díaz',
       testimonial: '"¡Excelente todo! Claramente esta propuesta es, fué y será ampliamente superior a cualquier otra. ¡Muchas Gracias!"',
-    },
-    {
-      id: 16,
-      name: 'Pablo Marcato',
-      testimonial: '"Una experiencia innolvidable, por muchas más!!"',
     },
   ];

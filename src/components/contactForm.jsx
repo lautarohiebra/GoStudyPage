@@ -119,8 +119,8 @@ const ContactForm = () => {
       <p>Tu mensaje ha sido enviado correctamente.</p>
     </div>
   ) : (
-    <div className="bg-gray-100 flex items-start w-full xl:w-auto justify-center">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-[480px] lg:w-[480px]">
+    <div className="flex items-start w-full xl:w-auto justify-center">
+      <div className="bg-base-100 p-8 rounded shadow-md w-full max-w-[480px] lg:w-[480px]">
         <h1 className="text-2xl font-bold mb-6">Dejanos tu consulta</h1>
         <form ref={formRef} onSubmit={handleSubmit} method="POST">
           <div className="mb-4">

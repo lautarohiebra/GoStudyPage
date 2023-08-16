@@ -214,7 +214,16 @@ export const destinos = [
       parrafo:"Cambridge es el lugar perfecto para que sus hijos se sumerjan en el idioma inglés mientras exploran una ciudad llena de historia y encanto. No solo mejorarán sus habilidades lingüísticas, sino que también crearán recuerdos inolvidables que durarán toda la vida."
       },
   ],
-    items: []
+    items: [
+      {textoItem:"2 semanas de curso general para estudiantes entre 12 y 18 años en Boston Cats College. (15hs semanales)"},
+      {textoItem:"Alojamiento en dormitorio individual con baño privado en Campus Boston Cats."},
+      {textoItem:"Pensión completa en el campus."},
+      {textoItem:"Material de estudio."},
+      {textoItem:"Test de nivelación y progreso."},
+      {textoItem:"Diploma de validez internacional."},
+      {textoItem:"Actividades deportivas, recreativas y excursiones todos los días."},
+      {textoItem:"Fin de semana completo en NYC (2 noches, 3 días) con traslados y desayuno incluidos."},
+    ]
   },
   {
     id: "cambridge",
@@ -245,11 +254,11 @@ export const destinos = [
       },
     ],
     items: [
-      {textoItem:"Lecciones: 45 minutos"},
-      {textoItem:"Habitación privada de estudio."},
+      {textoItem:"Lecciones: 3hs diarias."},
+      {textoItem:"Habitación con baño privado."},
+      {textoItem:"Pension completa."},
+      {textoItem:"Excursiones."},
       {textoItem:"Wifi Gratis"},
-      {textoItem:"Cantina"},
-      {textoItem:"Cafetería"},
     ]
   },
   {
@@ -283,7 +292,6 @@ export const destinos = [
       {textoItem:"Diploma de validez internacional."},
       {textoItem:"Actividades deportivas, recreativas y excursiones todos los días."},
       {textoItem:"Fin de semana completo en NYC (2 noches, 3 días) con traslados y desayuno incluidos."},
-
     ]
   },
   {

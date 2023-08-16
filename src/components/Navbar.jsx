@@ -72,7 +72,14 @@ const cursos = [
   },
 ];
 
-const Navbar2 = () => {
+const Navbar = () => {
+  const uncheckCheckbox = () => {
+    const checkbox = document.getElementById("my-drawer");
+    if (checkbox) {
+      checkbox.checked = false;
+    }
+  };
+
   return (
     <div className="navbar bg-base-100 text-neutral px-1 lg:px-8 fixed z-50 shadow-md h-20">
       <div className="navbar-start">
@@ -118,7 +125,7 @@ const Navbar2 = () => {
 
               <li>
                 <details>
-                  <summary className="bg-primary text-white mb-1 font-semibold hover:bg-primary-focus">
+                  <summary className="bg-primary text-white mb-1 font-semibold">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -140,7 +147,7 @@ const Navbar2 = () => {
                       <span>Programas para menores (-18)</span>
                     </div>{" "}
                     {programasMenores.map((programa, index) => (
-                      <Link key={index} to={programa.path}>
+                      <Link key={index} to={programa.path} onClick={uncheckCheckbox}>
                         <li className="mb-1 py-1 px-3 rounded-md transition-all btn-ghost underline">
                           {programa.name}
                         </li>
@@ -150,14 +157,14 @@ const Navbar2 = () => {
                       <span>Programas para mayores (+18)</span>
                     </div>{" "}
                     {programasMayores.map((programa, index) => (
-                      <Link key={index} to={programa.path}>
+                      <Link key={index} to={programa.path} onClick={uncheckCheckbox}>
                         <li className="mb-1 py-1 px-3 rounded-md transition-all btn-ghost underline">
                           {programa.name}
                         </li>
                       </Link>
                     ))}
                     <div className="divider m-0"></div>
-                    <Link to={"/programs"}>
+                    <Link to={"/programs"} onClick={uncheckCheckbox}>
                       <li className="btn btn-secondary btn-xs btn-block font-semibold text-center text-white transition-all hover:shadow-md hover:-translate-y-1 mb-2">
                         Todos los programas
                       </li>
@@ -170,7 +177,7 @@ const Navbar2 = () => {
 
               <li>
                 <details>
-                  <summary className="bg-primary text-white mb-1 font-semibold hover:bg-primary-focus">
+                  <summary className="bg-primary text-white mb-1 font-semibold ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -190,14 +197,14 @@ const Navbar2 = () => {
                   <ul className="transition-all">
                     {" "}
                     {destinos.map((destino, index) => (
-                      <Link key={index} to={destino.path}>
+                      <Link key={index} to={destino.path} onClick={uncheckCheckbox}>
                         <li className="mb-1 py-1 px-3 rounded-md transition-all btn-ghost underline">
                           {destino.name}
                         </li>
                       </Link>
                     ))}
                     <div className="divider m-0"></div>
-                    <Link to={"/destinations"}>
+                    <Link to={"/destinations"} onClick={uncheckCheckbox}>
                       <li className="btn btn-secondary btn-xs btn-block font-semibold text-center text-white transition-all hover:shadow-md hover:-translate-y-1 mb-2">
                         Todos los destinos
                       </li>
@@ -210,7 +217,7 @@ const Navbar2 = () => {
 
               <li>
                 <details>
-                  <summary className="bg-primary text-white mb-1 font-semibold hover:bg-primary-focus">
+                  <summary className="bg-primary text-white mb-1 font-semibold ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -230,14 +237,14 @@ const Navbar2 = () => {
                   <ul className="transition-all">
                     {" "}
                     {cursos.map((curso, index) => (
-                      <Link key={index} to={curso.path}>
+                      <Link key={index} to={curso.path} onClick={uncheckCheckbox}>
                         <li className="mb-1 py-1 px-3 rounded-md transition-all btn-ghost underline">
                           {curso.name}
                         </li>
                       </Link>
                     ))}
                     <div className="divider m-0"></div>
-                    <Link to={"/courses"}>
+                    <Link to={"/courses"} onClick={uncheckCheckbox}>
                       <li className="btn btn-secondary btn-xs btn-block font-semibold text-center text-white transition-all hover:shadow-md hover:-translate-y-1 mb-2">
                         Todos los cursos
                       </li>
@@ -271,12 +278,12 @@ const Navbar2 = () => {
               </li>
               <div className="divider"></div>
               <div className="w-full">
-                <Link to={"/about"}>
-                  <button className="btn btn-secondary btn-block montserrat">
+                <Link to={"/about"} onClick={uncheckCheckbox}>
+                  <button className="btn btn-accent btn-block montserrat">
                     Sobre Go Study
                   </button>
                 </Link>
-                <Link to={"/contact"}>
+                <Link to={"/contact"} onClick={uncheckCheckbox}>
                   <button className="btn btn-outline mt-3 btn-block montserrat">
                     Contacto
                   </button>
@@ -489,4 +496,4 @@ const Navbar2 = () => {
   );
 };
 
-export default Navbar2;
+export default Navbar;

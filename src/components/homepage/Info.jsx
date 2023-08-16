@@ -27,7 +27,7 @@ const Info = () => {
         <p className="text-base-100 font-normal text-lg text-center max-w-xl">
           Experiencias dinámicas que van mas allá de aprender un nuevo lenguaje.
         </p>
-        <div className="bg-base-100 p-5 shadow-md mt-5 max-w-lg">
+        <div className="bg-base-100 p-5 mt-5 max-w-lg">
           <h2 className="font-semibold text-accent">¡Sin importar tu edad, disponemos de un programa de estudio para vos!</h2>
           <p className="mt-2">
             Ofrecemos soluciones educativas integrales tanto para el joven en formación como para el adulto que desea expandir sus horizontes en el ámbito laboral.

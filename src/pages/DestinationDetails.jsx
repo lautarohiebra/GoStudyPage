@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import HeroAlt from "../shared/HeroAlt";
 import { destinos } from "../data/servicios";
 import ContactForm from "../components/contactForm";
+import FixedBg from "../shared/FixedBg";
 
 const DestinationDetails = () => {
   const { id } = useParams();
@@ -15,6 +16,7 @@ const DestinationDetails = () => {
   return (
     <div>
       <HeroAlt title={destino.titulo} backgroundImage={destino.imagen} />
+      <FixedBg img="/assets/backgroundDesign.png" />
       <div className="p-5 flex flex-col xl:flex-row xl:justify-center">
         <div className="rounded-md bg-base-100 p-5 shadow-md xl:mr-4 max-w-6xl gap-3">
           <p className="text-gray-700 font-semibold">{destino.texto}</p>

@@ -26,23 +26,23 @@ export function Testimonials() {
           rotate: 50,
           stretch: 0,
           depth: 100,
-          modifier: 1,
+          modifier: 0.6,
           slideShadows : true,
         }}
-        pagination={true}
+        pagination={false}
         modules={[EffectCoverflow, Pagination]}
         className="mt-8 h-96 w-full py-2"
       >
         {testimonialsData.map((testimonial, index) => (
           <SwiperSlide
             key={`testimonial_${index}`}
-            className="bg-[url('/assets/feedbackCard.png')] flex flex-col border-2 border-primary p-8 justify-center align-middle items-center text-center gap-2 w-80 bg-center shadow-md rounded-md"
+            className="bg-gradient-to-br from-slate-500 via-black to-black flex flex-col  p-8 justify-center align-middle items-center text-center gap-2 w-80 bg-center shadow-md rounded-md"
           >
 
-            <p className="text-black bg-base-100 p-2 font-semibold text-sm italic lg:text-base rounded-md border-primary border-2">
+            <p className="text-base-100 p-2 text-sm lg:text-base rounded-md">
               {testimonial.testimonial}
             </p>
-            <span className="text-primary font-semibold text-base">
+            <span className="text-accent font-semibold">
               {testimonial.name}
             </span>
           </SwiperSlide>
