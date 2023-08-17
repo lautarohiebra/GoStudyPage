@@ -16,7 +16,7 @@ import DestinationDetails from "./pages/DestinationDetails.jsx";
 import Courses from "./pages/Courses.jsx";
 import CourseDetails from "./pages/CourseDetails.jsx";
 import Accommodations from "./pages/Accommodations.jsx";
-import AboutUs from "./pages/aboutUs.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 import Contact from "./pages/Contact.jsx";
 import Gallery from "./pages/Gallery.jsx";
 
