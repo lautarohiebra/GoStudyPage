@@ -40,7 +40,7 @@ const AboutUs = () => {
             <span className="text-accent">respeto</span>,{" "}
             <span className="text-accent">honestidad</span>, y{" "}
             <span className="text-accent">profesionalismo</span>, Nada está
-            librado al azar, cada detalle está planificando cada detalle para
+            librado al azar, cada detalle está planificando para
             que tengan la mejor experiencia.
           </p>
           <p className="lg:text-lg mb-4">
@@ -66,7 +66,7 @@ const AboutUs = () => {
           {team.map((member, index) => (
             <div
               key={`member` + index}
-              className="card w-96 xl:w-[400px] bg-gradient-to-br from-secondary to-primary shadow-xl"
+              className="card w-72 xl:w-[350px] bg-gradient-to-br from-secondary to-primary shadow-xl"
             >
               <figure>
                 <img src={member.image} alt={member.name} />

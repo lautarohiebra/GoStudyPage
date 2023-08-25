@@ -4,11 +4,11 @@ import { items } from "../../data/homeExpo";
 /* eslint-disable react/prop-types */
 const Expo = () => {
   return (
-    <>
+    <div className="bg-primary">
       {items.map((item,index) => (
         <div
           key={`expo_${index}`}
-          className={`hero min-h-[400px] lg:min-h-screen bg-cover lg:bg-fixed bg-center ${item.image}`}
+          className={`hero min-h-[400px] lg:min-h-screen bg-cover lg:bg-fixed bg-center ${item.image} mb-12 last:mb-0 lg:mb-0`}
         >
           <div className="hero-overlay bg-opacity-40"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -38,7 +38,7 @@ const Expo = () => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
