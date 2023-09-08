@@ -1,26 +1,45 @@
-import { gallery } from "../data/galleryData";
 import HeroAlt from "../shared/HeroAlt";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import { gallery } from "../data/galleryData";
 
 const Gallery = () => {
   return (
     <section>
-      <HeroAlt backgroundImage="" title="Galería" />
+      <HeroAlt title="Galería" />
       <div className="fixed top-0 left-0 w-full h-screen z-[-10] bg-right bg-contain lg:bg-center bg-[url('/assets/galleryBg.jpg')]" />
-      <div className="min-h-screen flex flex-col lg:flex-row flex-wrap gap-4 items-center justify-center p-3">
+
+      <div className="flex flex-col items-center justify-center p-5 gap-5">
         {gallery.map((item, index) => (
           <div
             key={`gallery_item_${index}`}
-            className="card rounded-lg w-full md:w-[80%] lg:[65%] xl:w-[45%] bg-base-200 shadow-xl transition-all"
+            className="w-full max-w-2xl shadow-md rounded-3xl lg:hover:scale-110 lg:hover:z-40 transition-all"
           >
-            <div className="card w-full shadow-xl">
-              <figure className="rounded-t-lg ">
-                <img src={item.image} alt={item.title} />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">{item.title}</h2>
-                <p className="">{item.description}</p>
-              </div>
-            </div>
+            <h3 className="bg-base-200 text-primary p-5 h-14 rounded-t-3xl">
+              {item.title}
+            </h3>
+            <Swiper
+              pagination={{
+                dynamicBullets: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper bg-secondary w-full h-full rounded-b-2xl"
+            >
+              {item.images.map((image, imageIndex) => (
+                <SwiperSlide
+                  className="w-full h-full"
+                  key={`gallery_item_${index}_image_${imageIndex}`}
+                >
+                  <div className="w-full h-full flex items-center justify-center align-middle">
+                    <img
+                      src={image}
+                      alt={item.title}
+                      className="max-h-[600px]"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         ))}
       </div>

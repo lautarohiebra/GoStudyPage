@@ -1,14 +1,34 @@
+/* eslint-disable react/prop-types */
+
 import { Link } from "react-router-dom";
 import { items } from "../../data/homeExpo";
 
-/* eslint-disable react/prop-types */
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+
 const Expo = () => {
   return (
     <div className="bg-primary">
-      {items.map((item,index) => (
-        <div
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper cursor-grab"
+      >
+        {items.map((item,index) => (
+        <SwiperSlide
           key={`expo_${index}`}
-          className={`hero min-h-[400px] lg:min-h-screen bg-cover lg:bg-fixed bg-center ${item.image} mb-12 last:mb-0 lg:mb-0`}
+          className={`hero min-h-[400px] lg:min-h-screen bg-cover bg-center ${item.image}`}
         >
           <div className="hero-overlay bg-opacity-40"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -36,8 +56,10 @@ const Expo = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </SwiperSlide>
       ))}
+      </Swiper>
+      
     </div>
   );
 };

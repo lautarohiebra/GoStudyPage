@@ -28,3 +28,8 @@ body {
 .montserrat {
   font-family: "Montserrat", sans-serif;
 }
+
+.swiper-wrapper{
+  display: flex;
+  align-items: center;
+}
