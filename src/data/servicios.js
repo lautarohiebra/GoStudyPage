@@ -84,11 +84,11 @@ export const programas = [
     destinos:[
       {
         destino:'Londres',
-        path:"/destinations/londres_college"
+        path:"/destinations/londres"
       },
       {
         destino:'Canterbury',
-        path:"/destinations/canterbury_college"
+        path:"/destinations/canterbury"
       },
       {
         destino:'Cambridge CATS College',

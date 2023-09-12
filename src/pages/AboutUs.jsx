@@ -58,31 +58,32 @@ const AboutUs = () => {
 
       {/* Seccion Equipo */}
 
-      <div className="w-full min-h-screen backdrop-invert py-10 flex flex-col align-middle items-center justify-center">
+      <div className="w-full min-h-screen backdrop-invert py-10 flex flex-col align-middle items-center justify-center gap-8">
         <h2 className="text-base-100 text-3xl font-semibold text-center">
           El equipo <span className="text-accent">Go Study</span>
         </h2>
-        <div className="flex flex-col lg:flex-row gap-5 p-5 align-middle items-center justify-between">
+        <div className="flex flex-col xl:flex-row gap-5 p-5 align-middle items-center justify-between">
           {team.map((member, index) => (
             <div
               key={`member` + index}
-              className="card w-72 xl:w-[350px] bg-gradient-to-br from-secondary to-primary shadow-xl"
+              className="card w-80 lg:w-[350px] h-[750px] bg-gradient-to-br from-secondary to-primary shadow-xl grayscale hover:grayscale-0 transition-all hover:-translate-y-1"
             >
-              <figure>
+              <figure className="h-[335px] transition-all">
                 <img src={member.image} alt={member.name} />
               </figure>
               <div className="card-body text-white">
                 <h2 className="card-title text-accent montserrat">{member.name}</h2>
-                <div className="card-actions">
                   {member.role.map((role, roleIndex) => (
                     <div
                     key={`role` + roleIndex}
-                    className="badge badge-outline"
+                    className="badge badge-outline text-xs lg:text-sm flex-wrap"
                     >
                       {role}
                     </div>
                   ))}
-                  <p className="text-base italic">{`"${member.phrase}"`}</p>
+                  <p className="text-sm lg:text-base italic">{`"${member.phrase}"`}</p>
+                <div className="card-actions">
+                  <p>LinkedIn</p>
                 </div>
               </div>
             </div>

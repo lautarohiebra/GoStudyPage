@@ -66,6 +66,12 @@ const ProgramDetails = () => {
                   Saber más
                 </Link>
               </li>
+              <li>
+                Mas Información en
+                <Link to="/courses" className="ml-2 hover:underline transition-all text-info">
+                  Cursos
+                </Link>
+              </li>
             </ul>
           </div>
           </>

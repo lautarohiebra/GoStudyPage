@@ -1,26 +1,26 @@
 export const team = [
     {
-        image:"/assets/placeholder.jpg",
+        image: "/assets/equipoDiana.png",
         name: "Diana Eusebi",
         role: [
-            'Co-fundadora', 'Dato extra', 'Dato extra'
+            'Co-fundadora', 'Prof. en Lengua y Lit. Inglesa UNLP'
         ],
-        phrase:"Espacio para agregar una frase inspiradora o algo de ese estilo en foma de cita"
+        phrase: "Estoy absolutamente convencida de que estas experiencias dejan recuerdos y amistades para toda la vida, además de abrir horizontes."
     },
     {
-        image:"/assets/placeholder.jpg",
+        image: "/assets/equipoPaula.png",
         name: "Paula Benzaquen",
         role: [
-            'Co-fundadora', 'Dato extra', 'Dato extra'
+            'Co-fundadora', 'Traductora pública de inglés USAL', 'Master en coaching organizacional'
         ],
-        phrase:"Espacio para agregar una frase inspiradora o algo de ese estilo en foma de cita"
+        phrase: "La posibilidad de realizar intercambios de estudio no solo desarrolla habilidades blandas indispensables para el futuro, sino que también afianza la autoestima, la autonomía y la socialización."
     },
     {
-        image:"/assets/placeholder.jpg",
-        name: "Eduardo",
+        image: "/assets/equipoEduardo.png",
+        name: "Eduardo Montuani",
         role: [
-            'Profesor acompañante', 'Organizador', 'Dato extra'
+            'Técnico en Turismo', 'Profesor de lengua inglesa', 'Travel & Tourism & Sustainability'
         ],
-        phrase:"Espacio para agregar una frase inspiradora o algo de ese estilo en foma de cita"
+        phrase: "Un viaje a otra cultura, junto con una experiencia de estudio de su lengua y la interacción con su gente, más un  agregado de diversión indudablemente resultan en una combinación ideal para ampliar el mundo de cualquier aventurero del conocimiento."
     },
-]
+];

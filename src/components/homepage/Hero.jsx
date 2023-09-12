@@ -15,7 +15,7 @@ const Hero = () => {
             ¡Aprende inglés y comunícate sin límites!
           </p>
           <Link
-            to={"/contact"}
+            to={"/programs"}
             className="btn montserrat border-none w-auto hover:-translate-y-1 text-white shadow-md gradientCTA"
           >
             Comienza ahora
