@@ -33,7 +33,7 @@ const Contact = () => {
               </ul>
             </li>
             <li className="mt-2 bg-base-200 p-2 rounded-md">
-              <span className="font-semibold">Email:</span>
+              <span className="font-semibold">Email:</span> <p className="inline">info@gostudy.com.ar</p>
             </li>
             <li className="mt-2 bg-base-200 p-2 rounded-md">
               <span className="font-semibold">Redes sociales:</span>

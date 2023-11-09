@@ -82,9 +82,6 @@ const AboutUs = () => {
                     </div>
                   ))}
                   <p className="text-sm lg:text-base italic">{`"${member.phrase}"`}</p>
-                <div className="card-actions">
-                  <p>LinkedIn</p>
-                </div>
               </div>
             </div>
           ))}

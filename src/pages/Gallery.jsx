@@ -13,7 +13,7 @@ const Gallery = () => {
         {gallery.map((item, index) => (
           <div
             key={`gallery_item_${index}`}
-            className="w-full max-w-2xl shadow-md rounded-3xl lg:hover:scale-110 lg:hover:z-40 transition-all"
+            className="w-full max-w-2xl shadow-md rounded-3xl lg:hover:z-40 transition-all cursor-grab"
           >
             <h3 className="bg-base-200 text-primary p-5 h-14 rounded-t-3xl">
               {item.title}
