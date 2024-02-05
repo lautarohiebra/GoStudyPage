@@ -159,7 +159,7 @@ export const destinos = [
       {
         parrafo:"Prepárate para embarcarte en una aventura única en Londres, donde cada día te presenta la oportunidad de aprender, crecer y vivir experiencias que transformarán tu vida para siempre. ¡La capital británica te espera con los brazos abiertos!"
       },
-  ],
+    ],
     items: [
       {textoItem: "Amplia variedad de cursos."},
       {textoItem: "Alojamientos en campus universitario o residencias estudiantiles."},
